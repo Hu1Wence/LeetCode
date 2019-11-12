@@ -6,8 +6,9 @@ class Solution {
         if (root.left == null && root.right == null) {
             return 1;
         }
-        int leftDepth = maxDepth(root.left);
-        int rightDepth = maxDepth(root.right);
-        return 1 + (leftDepth > rightDepth ? leftDepth : rightDepth);
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+
+        return 1 + (left > right ? left : right);
     }
 }
